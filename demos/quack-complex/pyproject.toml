@@ -1,17 +1,17 @@
 [project]
-name = "duck-vectors"
+name = "double-shot-of-duck-demos"
 version = "0.1.0"
-description = "Add your description here"
+description = "Double Shot of Duck Demos"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-  "pytz",
-  "loguru",
-  "duckdb ~= 1.5.2",
-  "pillow",
-  "torch",
-  "transformers < 5",  #FIXME
-  "torchvision ~= 0.27.0",
-  "fastapi[standard]",
-  "jinja2",
+  "duckdb == 1.5.2",
+  "fastapi == 0.136.3",
+  "jinja2 == 3.1.6",
+  "loguru == 0.7.3",
+  "pillow == 12.2.0",
+  "pytz == 2026.2",
+  "torch == 2.12.0",
+  "torchvision == 0.27.0",
+  "transformers < 5",  # There was a breaking API change in >5
 ]

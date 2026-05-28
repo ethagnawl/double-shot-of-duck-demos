@@ -4,6 +4,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from loguru import logger # noqa
+from pathlib import Path
 
 app = FastAPI()
 
@@ -28,8 +29,9 @@ def get_animals(animal):
     return animals
 
 
-templates = Jinja2Templates(directory="templates")
 
+BASE_DIR = Path(__file__).resolve().parent
+templates = Jinja2Templates(directory=BASE_DIR / "templates")
 
 @app.get("/animals/{animal}", response_class=HTMLResponse)
 async def main(request: Request, animal: str):
